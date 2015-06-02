@@ -414,6 +414,7 @@
 				D2A415291B0FB9CD00048F94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2A4152A1B0FB9CD00048F94 /* Build configuration list for PBXNativeTarget "LifeTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				D2A4152C1B0FB9CD00048F94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

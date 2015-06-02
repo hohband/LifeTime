@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lifeProgress: UIProgressView!
     @IBOutlet weak var spentLabel: UILabel!
     @IBOutlet weak var remainLabel: UILabel!
+    @IBOutlet weak var daysremainLabel: UILabel!
 
     var  newSecond = 0.0001 {
         willSet(spentSecond) {
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
             var strM = fs.stringFromNumber(spentMinute)
             var strS = fs.stringFromNumber(spentSec)
             
-            var l = "\(spentDay) \(strH!):\(strM!):\(strS!)"
+            var l = "\(spentDay) days \(strH!):\(strM!):\(strS!) since 1971-06-10 04:00"
             
             spentLabel.text = l
             
@@ -50,9 +51,13 @@ class ViewController: UIViewController {
             strM = fs.stringFromNumber(remainMinute)
             strS = fs.stringFromNumber(remainSec)
             
-            l = "\(remainDay) \(strH!):\(strM!):\(strS!)"
+            l = "\(strH!):\(strM!):\(strS!)"
             
             remainLabel.text = l
+            
+            l = "\(remainDay)"
+            
+            daysremainLabel.text = l
         }
     }
 
