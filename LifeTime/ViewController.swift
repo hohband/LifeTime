@@ -16,6 +16,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var remainLabel: UILabel!
     @IBOutlet weak var daysremainLabel: UILabel!
 
+    var dateBirthStr = "1971-06-10 04:00:00"
+    var ft = NSDateFormatter()
+    var lifeYear = 80
+    var timer: NSTimer?
+    
+    func initTime() {
+        
+        ft.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        var dateBirth = ft.dateFromString(dateBirthStr)
+        var now = NSDate()
+        newSecond = now.timeIntervalSinceDate(dateBirth!)
+    }
+    
+
     var  newSecond = 0.0001 {
         willSet(spentSecond) {
             
@@ -66,17 +80,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        var now = NSDate()
-        var dateBirthStr = "1971-06-10 04:00:00"
-        var ft = NSDateFormatter()
-        ft.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        var dateBirth = ft.dateFromString(dateBirthStr)
-        var lifeYear = 80
-        newSecond = now.timeIntervalSinceDate(dateBirth!)
-
-        var timer: NSTimer?
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer:", userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        initTime()
         
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer:", userInfo: nil, repeats: true)
+
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        timer?.invalidate()
     }
 
     override func didReceiveMemoryWarning() {
