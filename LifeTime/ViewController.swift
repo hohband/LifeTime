@@ -80,17 +80,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer:", userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(animated: Bool) {
         initTime()
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer:", userInfo: nil, repeats: true)
-
     }
     
     override func viewWillDisappear(animated: Bool) {
-        timer?.invalidate()
+        // timer?.invalidate()
     }
 
     override func didReceiveMemoryWarning() {
