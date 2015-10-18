@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var spentLabel: UILabel!
     @IBOutlet weak var remainLabel: UILabel!
     @IBOutlet weak var daysremainLabel: UILabel!
-
+    @IBOutlet weak var hoursremainLable: UILabel!
+    
     var dateBirthStr = "1971-06-10 04:00:00"
     var ft = NSDateFormatter()
     var lifeYear = 80
@@ -24,8 +25,8 @@ class ViewController: UIViewController {
     func initTime() {
         
         ft.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        var dateBirth = ft.dateFromString(dateBirthStr)
-        var now = NSDate()
+        let dateBirth = ft.dateFromString(dateBirthStr)
+        let now = NSDate()
         newSecond = now.timeIntervalSinceDate(dateBirth!)
     }
     
@@ -33,19 +34,19 @@ class ViewController: UIViewController {
     var  newSecond = 0.0001 {
         willSet(spentSecond) {
             
-            var fs = NSNumberFormatter()
+            let fs = NSNumberFormatter()
             fs.minimumIntegerDigits = 2
             
-            var supposeSecond = 80 * 365 * 24 * 60 * 60.0
+            let supposeSecond = 80 * 365 * 24 * 60 * 60.0
             
-            var remainSecond =  supposeSecond - spentSecond
+            let remainSecond =  supposeSecond - spentSecond
             
             lifeProgress.progress = Float(spentSecond / supposeSecond)
             
-            var spentDay = Int(spentSecond / 24 / 60 / 60)
-            var spentHour = Int(spentSecond % (24 * 60 * 60) / 3600)
-            var spentMinute = Int(spentSecond % (60 * 60) / 60)
-            var spentSec = Int(spentSecond % 60)
+            let spentDay = Int(spentSecond / 24 / 60 / 60)
+            let spentHour = Int(spentSecond % (24 * 60 * 60) / 3600)
+            let spentMinute = Int(spentSecond % (60 * 60) / 60)
+            let spentSec = Int(spentSecond % 60)
             
             
             var strH = fs.stringFromNumber(spentHour)
@@ -56,10 +57,10 @@ class ViewController: UIViewController {
             
             spentLabel.text = l
             
-            var remainDay = Int(remainSecond / 24 / 60 / 60)
-            var remainHour = Int(remainSecond % (24 * 60 * 60) / 3600)
-            var remainMinute = Int(remainSecond % (60 * 60) / 60)
-            var remainSec = Int(remainSecond % 60)
+            let remainDay = Int(remainSecond / 24 / 60 / 60)
+            let remainHour = Int(remainSecond % (24 * 60 * 60) / 3600)
+            let remainMinute = Int(remainSecond % (60 * 60) / 60)
+            let remainSec = Int(remainSecond % 60)
             
             strH = fs.stringFromNumber(remainHour)
             strM = fs.stringFromNumber(remainMinute)
@@ -68,6 +69,10 @@ class ViewController: UIViewController {
             l = "\(strH!):\(strM!):\(strS!)"
             
             remainLabel.text = l
+            
+            l = "\(remainDay * 24)"
+            
+            hoursremainLable.text = l
             
             l = "\(remainDay)"
             

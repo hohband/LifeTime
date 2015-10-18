@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,42 +18,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AUh-dq-sCl">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AUh-dq-sCl">
                                 <rect key="frame" x="26" y="578" width="548" height="3"/>
+                                <animations/>
                                 <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-e9-W74">
-                                <rect key="frame" x="26" y="224" width="548" height="21"/>
+                                <rect key="frame" x="26" y="271" width="548" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b13-CY-QDM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b13-CY-QDM">
                                 <rect key="frame" x="26" y="554" width="548" height="14"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13506" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfZ-x1-SJB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="13506" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfZ-x1-SJB">
                                 <rect key="frame" x="26" y="120" width="548" height="94"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnY-kn-k1X">
+                                <rect key="frame" x="26" y="216" width="548" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="i0Y-e9-W74" secondAttribute="trailing" constant="10" id="4eC-dX-d5w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i0Y-e9-W74" secondAttribute="trailing" constant="6" id="4eC-dX-d5w"/>
                             <constraint firstItem="AUh-dq-sCl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="7A4-cH-txK"/>
+                            <constraint firstItem="ZnY-kn-k1X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="A52-yY-b1a"/>
+                            <constraint firstItem="ZnY-kn-k1X" firstAttribute="top" secondItem="hfZ-x1-SJB" secondAttribute="bottom" constant="2" id="Ehe-Om-Vc1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AUh-dq-sCl" secondAttribute="trailing" constant="10" id="FAc-kV-YrP"/>
-                            <constraint firstItem="i0Y-e9-W74" firstAttribute="top" secondItem="hfZ-x1-SJB" secondAttribute="bottom" constant="10" id="L5i-AR-Dme"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZnY-kn-k1X" secondAttribute="trailing" constant="6" id="FwM-cc-b57"/>
+                            <constraint firstItem="i0Y-e9-W74" firstAttribute="top" secondItem="hfZ-x1-SJB" secondAttribute="bottom" constant="57" id="L5i-AR-Dme"/>
                             <constraint firstItem="b13-CY-QDM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="OZT-fw-M3p"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AUh-dq-sCl" secondAttribute="bottom" constant="20" id="Qxm-3Y-D8q"/>
                             <constraint firstItem="hfZ-x1-SJB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Zor-kT-Uz3"/>
                             <constraint firstItem="hfZ-x1-SJB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="bHV-r5-O0t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hfZ-x1-SJB" secondAttribute="trailing" constant="10" id="h4i-SE-eoi"/>
-                            <constraint firstItem="i0Y-e9-W74" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="hJu-AU-ADe"/>
+                            <constraint firstItem="i0Y-e9-W74" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="hJu-AU-ADe"/>
                             <constraint firstAttribute="centerY" secondItem="AUh-dq-sCl" secondAttribute="centerY" priority="750" constant="50" id="nKh-u7-Dz0"/>
                             <constraint firstItem="AUh-dq-sCl" firstAttribute="top" secondItem="b13-CY-QDM" secondAttribute="bottom" constant="10" id="tce-GC-Kqd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b13-CY-QDM" secondAttribute="trailing" constant="10" id="uC2-DR-cKb"/>
@@ -60,6 +76,7 @@
                     </view>
                     <connections>
                         <outlet property="daysremainLabel" destination="hfZ-x1-SJB" id="T9u-1p-ByC"/>
+                        <outlet property="hoursremainLable" destination="ZnY-kn-k1X" id="4In-DV-4Lw"/>
                         <outlet property="lifeProgress" destination="AUh-dq-sCl" id="Pe5-EU-iXp"/>
                         <outlet property="remainLabel" destination="i0Y-e9-W74" id="60p-oe-WxP"/>
                         <outlet property="spentLabel" destination="b13-CY-QDM" id="Aa2-Z6-dTf"/>
@@ -67,6 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="297" y="361"/>
         </scene>
     </scenes>
 </document>
